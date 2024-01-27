@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hotstar-app
-        image: your-docker-image-name  # Replace with your actual image name
+        image: kiranreddychalla/netflix:1.0.1  # Replace with your actual image name
         ports:
         - containerPort: 3000  # Port exposed by the container
