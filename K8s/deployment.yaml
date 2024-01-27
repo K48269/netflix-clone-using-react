@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotstar-app  # Name of your deployment
+spec:
+  replicas: 3  # Number of pods to create
+  selector:
+    matchLabels:
+      app: hotstar-app  # Label for pods matching this deployment
+  template:
+    metadata:
+      labels:
+        app: hotstar-app  # Label for pods created by this deployment
+    spec:
+      containers:
+      - name: hotstar-app
+        image: your-docker-image-name  # Replace with your actual image name
+        ports:
+        - containerPort: 3000  # Port exposed by the container
